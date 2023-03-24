@@ -1,12 +1,12 @@
 from functools import lru_cache
 from typing import List, Dict
+import csv
 
 
 @lru_cache
 def read(path: str) -> List[Dict]:
     """Reads a file from a given path and returns its contents
 
-    
     Parameters
     ----------
     path : str
@@ -17,7 +17,9 @@ def read(path: str) -> List[Dict]:
     list
         List of rows as dicts
     """
-    raise NotImplementedError
+    with open(path, "r", encoding="utf-8") as file:
+        contents = list(csv.DictReader(file))
+        return contents
 
 
 def get_unique_job_types(path: str) -> List[str]:
