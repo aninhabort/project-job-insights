@@ -3,6 +3,6 @@
 ## Foi realizado:
   - Individual
   
-## Linguagens utilizadas:
+## Linguagens e Ferramentas utilizadas:
   - Python
   - Pytest
